@@ -1,0 +1,2 @@
+max_depth	min_split	vminbucket	vcp	ganancia_promedio
+6	600	150	-0.5	50836000

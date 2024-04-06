@@ -78,7 +78,7 @@ ArbolesMontecarlo <- function(semillas, param_basicos) {
     semillas, # paso el vector de semillas
     MoreArgs = list(param_basicos), # aqui paso el segundo parametro
     SIMPLIFY = FALSE,
-    mc.cores = 5 # en Windows este valor debe ser 1
+    mc.cores = 1 # en Windows este valor debe ser 1
   )
 
   ganancia_promedio <- mean(unlist(ganancias))
@@ -89,11 +89,11 @@ ArbolesMontecarlo <- function(semillas, param_basicos) {
 #------------------------------------------------------------------------------
 
 # Aqui se debe poner la carpeta de la computadora local
-setwd("~/buckets/b1/") # Establezco el Working Directory
+setwd("C:\\Users\\tomif\\Desktop\\Maestria\\laboratorio_1\\labo2024v1") # Establezco el Working Directory
 # cargo los datos
 
 # cargo los datos
-dataset <- fread("./datasets/dataset_pequeno.csv")
+dataset <- fread(".\\datasets\\dataset_pequeno.csv")
 
 # trabajo solo con los datos con clase, es decir 202107
 dataset <- dataset[clase_ternaria != ""]
@@ -103,7 +103,11 @@ dataset <- dataset[clase_ternaria != ""]
 # HT  representa  Hiperparameter Tuning
 dir.create("./exp/", showWarnings = FALSE)
 dir.create("./exp/HT2020/", showWarnings = FALSE)
+<<<<<<< Updated upstream
 archivo_salida <- "./exp/HT2020/gridsearch_check_elizabeth.txt"
+=======
+archivo_salida <- "./exp/HT2020/experimiento_bayesiano.txt"
+>>>>>>> Stashed changes
 
 # genero la data.table donde van los resultados del Grid Search
 tb_grid_search <- data.table( max_depth = integer(),
@@ -115,10 +119,17 @@ tb_grid_search <- data.table( max_depth = integer(),
 
 # itero por los loops anidados para cada hiperparametro
 
+<<<<<<< Updated upstream
 for (vmax_depth in c(6)){
   for (vmin_split in c(600)){ 
     for (vcp in c(-0.5)){
       for (vminbucket in round(c(150))){
+=======
+for (vmax_depth in c(17)){
+  for (vmin_split in c(2002)){ 
+    for (vcp in c(-0.990134449765289)){
+      for (vminbucket in round(c(998))){
+>>>>>>> Stashed changes
     # notar como se agrega
 
     # vminsplit  minima cantidad de registros en un nodo para hacer el split
