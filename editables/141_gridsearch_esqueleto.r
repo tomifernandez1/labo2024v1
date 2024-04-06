@@ -103,7 +103,7 @@ dataset <- dataset[clase_ternaria != ""]
 # HT  representa  Hiperparameter Tuning
 dir.create("./exp/", showWarnings = FALSE)
 dir.create("./exp/HT2020/", showWarnings = FALSE)
-archivo_salida <- "./exp/HT2020/gridsearch.txt"
+archivo_salida <- "./exp/HT2020/gridsearch_check_elizabeth.txt"
 
 # genero la data.table donde van los resultados del Grid Search
 tb_grid_search <- data.table( max_depth = integer(),
@@ -115,10 +115,10 @@ tb_grid_search <- data.table( max_depth = integer(),
 
 # itero por los loops anidados para cada hiperparametro
 
-for (vmax_depth in c(4, 6, 8, 10, 12)){
-  for (vmin_split in c(80,160,320,640)){ 
-    for (vcp in c(-0.5,-0.3,-0.2,-0.1)){
-      for (vminbucket in round(c(vmin_split/4,vmin_split/3,vmin_split/2,10,5,2))){
+for (vmax_depth in c(6)){
+  for (vmin_split in c(600)){ 
+    for (vcp in c(-0.5)){
+      for (vminbucket in round(c(150))){
     # notar como se agrega
 
     # vminsplit  minima cantidad de registros en un nodo para hacer el split
