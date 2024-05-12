@@ -19,7 +19,7 @@ def download_blobs_in_folder(bucket_name, folder_name, destination_folder):
 
 # Specify your bucket name, folder name, and destination folder
 bucket_name = "taferna"
-folder_name = r"exp_dart_baseline1/ZZ0001"
-destination_folder = r"C:\Users\tomif\Desktop\LABO LAPTOP\guantes blancos\dart_baseline1\bajadas"
+folder_name = r"exp_gbdt_02/ZZ0001"
+destination_folder = r"C:\Users\tomif\Desktop\LABO LAPTOP\guantes blancos\gbdt_02\bajadas"
 
 download_blobs_in_folder(bucket_name, folder_name, destination_folder)

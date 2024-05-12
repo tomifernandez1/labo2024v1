@@ -24,4 +24,4 @@ df = pd.DataFrame(data, columns=['Submission ID', 'File Name', 'Description', 'P
 directory = r'C:\Users\tomif\Desktop\LABO LAPTOP\guantes blancos\kaggle_bajadas'
 
 # Write the DataFrame to an Excel file in the specified directory
-df.to_excel(f'{directory}\\submissions_5.xlsx', index=False)
+df.to_excel(f'{directory}\\submissions_9.xlsx', index=False)
